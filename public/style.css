@@ -1,15 +1,17 @@
-
+/* Cuerpo y fondo general */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6db3f2, #ffffff);
+    background-color: #111826;  /* Fondo oscuro */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #f2f2f2;  /* Texto en color claro para contraste */
 }
 
+/* Contenedor de inicio de sesión */
 .login-wrapper {
     display: flex;
     justify-content: center;
@@ -18,8 +20,9 @@ body {
     max-width: 400px;
 }
 
+/* Estilo del contenedor del formulario */
 .login-container {
-    background: #ffffff;
+    background: #1a2a39;  /* Un tono oscuro para el contenedor */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -27,6 +30,7 @@ body {
     width: 100%;
 }
 
+/* Estilo del logo */
 .brand-logo {
     text-align: center;
     margin-bottom: 20px;
@@ -40,7 +44,7 @@ body {
 .brand-logo h1 {
     font-size: 24px;
     margin: 0;
-    color: #4caf50;
+    color: #F2B33D;  /* Color dorado para el nombre de la marca */
 }
 
 .brand-logo p {
@@ -51,9 +55,10 @@ body {
 h2 {
     font-size: 22px;
     margin-bottom: 20px;
-    color: #333;
+    color: #F2B33D;  /* Título en dorado */
 }
 
+/* Estilo de los campos de entrada */
 input {
     display: block;
     width: 100%;
@@ -64,18 +69,23 @@ input {
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
+    background-color: #1a2a39;  /* Fondo oscuro en los inputs */
+    color: #f2f2f2;  /* Color claro en el texto de los inputs */
 }
 
 input:focus {
-    border-color: #4caf50;
+    border-color: #F2B33D;  /* Borde dorado al hacer foco */
+    box-shadow: 0 0 5px rgba(242, 179, 61, 0.5);  /* Halo dorado */
 }
 
+/* Estilo para opciones de "Recordar contraseña" */
 .options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
     margin: 10px 0;
+    color: #f2f2f2;
 }
 
 .remember-me {
@@ -87,11 +97,12 @@ input:focus {
     margin-right: 5px;
 }
 
+/* Estilo de los botones */
 button {
     width: 100%;
     padding: 12px;
-    background: #4caf50;
-    color: #fff;
+    background: #F2B33D;  /* Botón dorado */
+    color: #111826;  /* Texto oscuro en el botón */
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -100,7 +111,7 @@ button {
 }
 
 button:hover {
-    background: #45a049;
+    background: #e1a032;  /* Tono más oscuro para el hover */
     transform: translateY(-2px);
 }
 
@@ -108,8 +119,9 @@ button:active {
     transform: translateY(0);
 }
 
+/* Enlace "Olvidé mi contraseña" */
 .forgot-password {
-    color: #4caf50;
+    color: #F2B33D;
     text-decoration: none;
 }
 
@@ -117,21 +129,23 @@ button:active {
     text-decoration: underline;
 }
 
+/* Texto para crear cuenta */
 .signup-text {
     margin-top: 20px;
     font-size: 14px;
-    color: #333;
+    color: #f2f2f2;
 }
 
 .signup-text a {
-    color: #4caf50;
+    color: #F2B33D;
     text-decoration: none;
 }
 
 .signup-text a:hover {
     text-decoration: underline;
 }
-/* Message popup styling */
+
+/* Estilo para mensajes de error o éxito */
 .message-popup {
     display: none;
     position: fixed;
@@ -147,35 +161,20 @@ button:active {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Success message */
+/* Estilo para mensajes de éxito */
 .message-popup.success {
     background-color: #4caf50;
     color: #fff;
 }
 
-/* Error message */
+/* Estilo para mensajes de error */
 .message-popup.error {
     background-color: #f44336;
     color: #fff;
 }
-.register-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    display: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-}
-.register-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    display: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-}
+
+/* Registro y login mensajes */
+.register-message,
 .login-message {
     margin-top: 20px;
     padding: 15px;
@@ -185,18 +184,13 @@ button:active {
     font-size: 14px;
     font-weight: bold;
 }
-.login-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    display: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-}
+
+/* Efecto de enfoque adicional en los campos */
 input:focus {
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Agrega un halo al hacer foco */
+    box-shadow: 0 0 5px rgba(242, 179, 61, 0.5);  /* Halo dorado en los inputs */
 }
+
+/* Resaltado de botón al navegar con el teclado */
 button:focus {
-    outline: 2px solid #4caf50; /* Resalta el botón al navegar con teclado */
+    outline: 2px solid #F2B33D;  /* Borde dorado al hacer foco */
 }
