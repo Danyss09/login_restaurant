@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - StayEase</title>
+    <title>Login - BocatoFusion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
         <div class="login-container">
             <div class="brand-logo">
                 <img src="logo.png" alt="Company Logo">
-                <h1>StayEase</h1>
-                <p>Su puerta de entrada a la comodidad</p>
+                <h1>BocatoFusion</h1>
+                <p>Reserve with ease, dine in style</p>
             </div>
             <form id="login-form" class="form">
-                <h2>¡BIENVENIDO!</h2>
+                <h2>¡WELCOME!</h2>
               
                 <input type="text" id="login-username" name="username" placeholder="Usuario o Correo Electrónico" required />
                 <input type="password" id="login-password" name="password" placeholder="Contraseña" required />
@@ -23,15 +23,15 @@
                 <div class="options">
                     <div class="remember-me">
                         <input type="checkbox" id="rememberMe">
-                        <label for="rememberMe">Recordar contraseña</label>
+                        <label for="rememberMe">Remember password</label>
                     </div>
                     <a href="#" id="forgotPassword" class="forgot-password">¿Olvidaste tu contraseña?</a>
                 </div>
 
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit">Login</button>
 
                 <p class="signup-text">
-                    ¿Eres nuevo en StayEase? <a href="profile.html">Crea tu cuenta</a>
+                    Are you new to BocatoFusion?<a href="profile.html">Create your account</a>
                 </p>
             </form>
            
@@ -62,7 +62,7 @@
             messageDiv.style.display = 'block'; // Asegura que el mensaje se muestre
 
             if (response.ok) {
-                messageDiv.textContent = 'Inicio de sesión exitoso. ¡Bienvenido!';
+                messageDiv.textContent = 'Successful login. Welcome!';
                 messageDiv.style.color = 'green';
                 messageDiv.style.backgroundColor = '#d4edda';  // Color de fondo para éxito
                 setTimeout(() => {
@@ -70,7 +70,7 @@
                     window.location.href = 'user.html'; // Redirige al perfil del usuario
                 }, 2000); // Espera 2 segundos antes de redirigir
             } else {
-                messageDiv.textContent = 'Usuario o contraseña incorrectos. Inténtalo de nuevo.';
+                messageDiv.textContent = 'Incorrect username or password. Try again.';
                 messageDiv.style.color = 'red';
                 messageDiv.style.backgroundColor = '#f8d7da';  // Color de fondo para error
                 setTimeout(() => {
