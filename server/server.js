@@ -10,6 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -32,6 +33,7 @@ app.post('/register', async (req, res) => {
         res.status(500).json({ message: 'Error al registrar usuario' });
     }
 });
+
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     console.log('Datos recibidos para login:', { username, password }); // Log para verificar datos
@@ -58,6 +60,5 @@ app.post('/login', async (req, res) => {
         return res.status(500).json({ message: 'Error al iniciar sesión' });
     }
 });
-
 
 app.listen(3000, () => console.log('Servidor corriendo en http://localhost:3000'));
